@@ -1,10 +1,22 @@
 const images = [
   './img/foto1.jpg',
-  './img/foto2.jpg',
+  // './img/foto2.jpg',
+  // './img/foto3.jpg',
+  // './img/foto4.jpg',
+  // './img/foto5.jpg',
+  // './img/foto6.jpg',
+  // './img/foto7.jpeg',
+  // './img/foto8.jpeg',
+  './img/foto9.jpeg',
+  './img/foto10.jpeg',
+  './img/foto11.jpeg',
+  // './img/foto12.jpeg',
+  './img/foto13.jpeg',
+  './img/foto14.jpeg',
+  './img/foto15.jpeg',
 ];
 
 let currentIndex = 0;
-let lastScrollTop = 0;
 
 function preloadImages() {
   images.forEach(src => {
@@ -15,19 +27,9 @@ function preloadImages() {
 }
 
 function changeBackground() {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const windowHeight = window.innerHeight;
-
-  if (Math.abs(scrollTop - lastScrollTop) > windowHeight / 2) {
-    if (scrollTop > lastScrollTop) {
-      currentIndex = (currentIndex + 1) % images.length;
-    } else {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-    }
-    document.body.style.setProperty('--background-image', `url(${images[currentIndex]})`);
-    console.log(`Changing background to: ${images[currentIndex]}`);
-    lastScrollTop = scrollTop;
-  }
+  currentIndex = (currentIndex + 1) % images.length;
+  document.body.style.setProperty('--background-image', `url(${images[currentIndex]})`);
+  console.log(`Changing background to: ${images[currentIndex]}`);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,17 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.remove('open');
   });
 
-  // Inicializar con la primera imagen
   document.body.style.setProperty('--background-image', `url(${images[0]})`);
   console.log(`Initial background image: ${images[0]}`);
-
-  // Precargar imágenes
   preloadImages();
+  setInterval(changeBackground, 4000);
 
-  // Escuchar el evento de scroll
-  window.addEventListener('scroll', changeBackground);
-
-  // Manejar deslizamiento para cerrar el menú
   let touchstartX = 0;
   let touchendX = 0;
 
