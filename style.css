@@ -176,6 +176,56 @@ li:hover::after {
   transform-origin: bottom left;
 }
 
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu-item {
+  opacity: 0; /* Ensures elements are hidden before animation */
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Add this to stagger the animation for menu items */
+.menu-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Add this to animate logo items */
+.logo-item {
+  opacity: 0; /* Ensures elements are hidden before animation */
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Add this to stagger the animation for logo items */
+.logo-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.logo-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.logo-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.logo-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
 .secondary-menu {
   display: flex;
   flex-flow: row;
