@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Kaisei+Opti&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  height: 100vh;
+  background-image: url("/img/foto1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 52px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  flex: none;
+  left: 30px;
+  max-width: 100%;
+  top: 28px;
+  border-radius: 20px;
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  letter-spacing: -3.8px;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2 {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt"0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 20px;
+}
+
+h3 span {
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+.nav-sub {
+  font-weight: 400;
+  text-decoration: none;
+  color: #879096;
+}
+
+.nav-sub :hover {
+  color: #0088ff;
+  text-decoration: underline;
+}
+
+.nav-sub-in {
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-sub-in :hover {
+  color: #0088ff;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+li {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 2em;
+  display: block !important;
+  padding: 0.5rem !important;
+  box-sizing: border-box;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  width: 630px;
+  background: white;
+  padding: 0px 20px;
+  border: solid;
+  padding-left: 10px;
+  margin: 10px;
+  border-width: thin;
+  height: 400px;
+}
+
+.secondary-menu {
+  display: flex;
+  flex-flow: row;
+  gap: 26px;
+  height: min-content;
+  padding: 0px;
+  position: relative;
+  width: 560px;
+  z-index: 1;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 11px;
+  margin-left: 10px;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu-item {
+  opacity: 0; /* Ensures elements are hidden before animation */
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Add this to stagger the animation for menu items */
+.menu-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Add this to animate logo items */
+.logo-item {
+  opacity: 0; /* Ensures elements are hidden before animation */
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Add this to stagger the animation for logo items */
+.logo-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.logo-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.logo-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.logo-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.hamburguer-menu {
+  display: none !important;
+}
+
+@media (max-width: 1000px) {
+  .hamburguer-menu {
+    display: block !important;
+  }
+
+  .hamburger {
+    display: flex;
+    padding: 10px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: white;
+    transition: height 0.4s ease-in-out;
+  }
+
+  .menu.open {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .menu li:hover::after {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    width: 290px;
+    height: 100%;
+  }
+
+  .secondary-menu {
+    display: none;
+  }
+
+  h1 {
+   font-size: 46px;
+   height: 100%; 
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+}
