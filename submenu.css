@@ -40,19 +40,18 @@ h2 {
   font-size: 12px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings:
     "slnt"0;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 0px;
 }
 
 h3 {
   font-size: 14px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   margin-top: 20px;
 }
@@ -135,11 +134,10 @@ a {
 .logo-container {
   display: flex;
   flex-direction: column;
-  width: 630px;
+  width: 550px;
   background: white;
-  padding: 0px 20px;
+  padding: 10px;
   border: solid;
-  padding-left: 10px;
   margin: 10px;
   border-width: thin;
   height: 400px;
