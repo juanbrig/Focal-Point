@@ -94,8 +94,15 @@ h3 {
   display: flex;
   justify-content: center;
   font-size: 2em;
-  margin-top: 50px;
   font-family: 'DM Sans';
+}
+
+.celu {
+  display: none;
+}
+
+.compu {
+  display: block;
 }
 
 .section p {
@@ -283,6 +290,14 @@ li:hover::after {
   .hamburger {
     display: flex;
   }
+
+  .celu {
+    display: block;
+  }
+
+.compu {
+  display: none;
+}
 
   .menu {
     display: none;

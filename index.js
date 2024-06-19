@@ -14,6 +14,10 @@ const images = [
   // './img/foto12.jpeg',
   './img/foto13.jpeg',
   './img/foto15.jpeg',
+  './img/foto16.jpeg',
+  './img/foto17.jpeg',
+  './img/foto18.jpeg',
+  './img/foto19.jpeg',
 ];
 
 let currentIndex = 0;

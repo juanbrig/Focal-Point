@@ -86,6 +86,8 @@ h4 {
   text-decoration: underline;
 }
 
+
+
 nav ul {
   display: flex;
   list-style: none;
@@ -163,6 +165,7 @@ a {
     transform: translateY(20px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -170,7 +173,8 @@ a {
 }
 
 .menu-item {
-  opacity: 0; /* Ensures elements are hidden before animation */
+  opacity: 0;
+  /* Ensures elements are hidden before animation */
   animation: slideUp 0.6s ease-out forwards;
 }
 
@@ -178,19 +182,23 @@ a {
 .menu-item:nth-child(1) {
   animation-delay: 0.2s;
 }
+
 .menu-item:nth-child(2) {
   animation-delay: 0.4s;
 }
+
 .menu-item:nth-child(3) {
   animation-delay: 0.6s;
 }
+
 .menu-item:nth-child(4) {
   animation-delay: 0.8s;
 }
 
 /* Add this to animate logo items */
 .logo-item {
-  opacity: 0; /* Ensures elements are hidden before animation */
+  opacity: 0;
+  /* Ensures elements are hidden before animation */
   animation: slideUp 0.6s ease-out forwards;
 }
 
@@ -198,12 +206,15 @@ a {
 .logo-item:nth-child(1) {
   animation-delay: 0.2s;
 }
+
 .logo-item:nth-child(2) {
   animation-delay: 0.4s;
 }
+
 .logo-item:nth-child(3) {
   animation-delay: 0.6s;
 }
+
 .logo-item:nth-child(4) {
   animation-delay: 0.8s;
 }
@@ -279,8 +290,8 @@ a {
   }
 
   h1 {
-   font-size: 46px;
-   height: 100%; 
+    font-size: 46px;
+    height: 100%;
   }
 
   h3 {
