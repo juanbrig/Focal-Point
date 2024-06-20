@@ -94,6 +94,16 @@ h3 {
   display: block;
 }
 
+.trabajamos {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Clash Display", "Clash Display Placeholder", sans-serif;
+  width: 90%;
+  justify-content: center;
+  display: block;
+}
+
 .linktree {
   font-family: "Plus Jakarta Sans", sans-serif;
   position: fixed;
