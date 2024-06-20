@@ -7,10 +7,7 @@ const images = [
   './img/foto6.jpeg',
   './img/foto7.jpeg',
   './img/foto8.jpeg',
-  './img/foto9.jpeg',
 ];
-
-let currentIndex = 0;
 
 function preloadImages() {
   images.forEach(src => {
@@ -20,10 +17,14 @@ function preloadImages() {
   });
 }
 
+function getRandomImage() {
+  return images[Math.floor(Math.random() * images.length)];
+}
+
 function changeBackground() {
-  currentIndex = (currentIndex + 1) % images.length;
-  document.body.style.setProperty('--background-image', `url(${images[currentIndex]})`);
-  console.log(`Changing background to: ${images[currentIndex]}`);
+  const newImage = getRandomImage();
+  document.body.style.setProperty('--background-image', `url(${newImage})`);
+  console.log(`Changing background to: ${newImage}`);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,8 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.remove('open');
   });
 
-  document.body.style.setProperty('--background-image', `url(${images[0]})`);
-  console.log(`Initial background image: ${images[0]}`);
+  const initialImage = getRandomImage();
+  document.body.style.setProperty('--background-image', `url(${initialImage})`);
+  console.log(`Initial background image: ${initialImage}`);
   preloadImages();
   setInterval(changeBackground, 4000);
 

@@ -53,10 +53,15 @@ footer {
   height: 180px;
 }
 
+.logo {
+  margin-bottom: 20px;
+}
+
 .store-planning {
   display: flex;
   flex-direction: column;
   align-items: end;
+  margin-right: 19px;
 }
 
 h3 {
@@ -125,12 +130,12 @@ h1 {
   left: 30px;
   max-width: 100%;
   top: 28px;
-  border-radius: 20px;
   font-family: "Libre Bodoni", serif;
   font-optical-sizing: auto;
   font-style: normal;
   letter-spacing: -3.8px;
   font-weight: 400;
+  height: 100px;
 }
 
 a {
