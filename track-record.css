@@ -155,10 +155,6 @@ li {
   transition: 0.4s;
 }
 
-.hamburguer-menu {
-  display: none !important;
-}
-
 
 .hamburger {
   display: none;
@@ -219,6 +215,12 @@ li {
   .menu li:hover::after {
     display: none;
   }
+
+  .close-btn {
+  align-self: flex-end;
+  font-size: 25px;
+  cursor: pointer;
+}
 
   header {
     display: flex;

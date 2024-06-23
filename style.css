@@ -5,7 +5,8 @@ body {
   padding: 0;
   background-color: #f8f8f8;
   height: 100vh;
-  overflow: hidden; /* Desactiva el scroll en el body */
+  overflow: hidden;
+  /* Desactiva el scroll en el body */
 }
 
 body::before {
@@ -58,17 +59,19 @@ footer {
 .logo-container {
   width: 572px;
   height: 180px;
+  padding-left: 10px;
 }
 
 .logo {
   margin-bottom: 20px;
+  padding-left: 10px;
 }
 
 .store-planning {
   display: flex;
   flex-direction: column;
   align-items: end;
-  margin-right: 19px;
+  margin-right: 12px;
 }
 
 h3 {
@@ -84,9 +87,11 @@ h3 {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
+  justify-content: center;
+  /* Centra el contenido verticalmente */
   align-items: center;
-  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+  height: 100vh;
+  /* Hace que el contenedor ocupe toda la altura de la ventana */
 }
 
 .content {
@@ -94,9 +99,11 @@ h3 {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: "Clash Display", "Clash Display Placeholder", sans-serif;
-  width: 90%;
-  max-height: 80vh; /* Asegura que el contenido no exceda el 80% de la altura de la ventana */
-  overflow: auto; /* Permite el scroll dentro del contenedor si el contenido excede el 80% de la altura */
+  width: 43%;
+  max-height: 80vh;
+  /* Asegura que el contenido no exceda el 80% de la altura de la ventana */
+  overflow: auto;
+  /* Permite el scroll dentro del contenedor si el contenido excede el 80% de la altura */
 }
 
 .linktree {
@@ -108,7 +115,8 @@ h3 {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
-  text-align: center; /* Centra el texto del linktree */
+  text-align: center;
+  /* Centra el texto del linktree */
 }
 
 .linktree::after {
@@ -367,8 +375,26 @@ li:hover::after {
     display: block;
   }
 
+  .li-compu {
+    display: none !important;
+    padding: 0px !important;
+  }
+
+  .content {
+    max-width: 80%;
+    margin-top: 100px;
+  }
+
+  .como-trabajamos {
+    width: 80%;
+  }
+
   .linktree-container {
     display: none;
+  }
+
+  .title {
+    font-size: 30px;
   }
 
   .compu {
@@ -411,8 +437,17 @@ li:hover::after {
   }
 
   .logo-container {
-    width: 290px;
     height: 100%;
+    width: auto;
+  }
+
+  .store-planning {
+    margin-right: 2px;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 70%;
   }
 
   .secondary-menu {
@@ -420,7 +455,7 @@ li:hover::after {
   }
 
   h1 {
-    font-size: 46px;
+    font-size: 42px;
     height: 100%;
   }
 
