@@ -5,8 +5,8 @@ const images = [
   './img/foto4.jpeg',
   './img/foto5.jpeg',
   './img/foto6.jpeg',
-  './img/foto7.jpeg',
   './img/foto8.jpeg',
+  './img/foto9.jpeg',
 ];
 
 function preloadImages() {
