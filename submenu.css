@@ -174,11 +174,8 @@ a {
 
 .menu-item {
   opacity: 0;
-  /* Ensures elements are hidden before animation */
   animation: slideUp 0.6s ease-out forwards;
 }
-
-/* Add this to stagger the animation for menu items */
 .menu-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -194,15 +191,10 @@ a {
 .menu-item:nth-child(4) {
   animation-delay: 0.8s;
 }
-
-/* Add this to animate logo items */
 .logo-item {
   opacity: 0;
-  /* Ensures elements are hidden before animation */
   animation: slideUp 0.6s ease-out forwards;
 }
-
-/* Add this to stagger the animation for logo items */
 .logo-item:nth-child(1) {
   animation-delay: 0.2s;
 }

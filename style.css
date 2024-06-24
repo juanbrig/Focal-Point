@@ -6,7 +6,6 @@ body {
   background-color: #f8f8f8;
   height: 100vh;
   overflow: hidden;
-  /* Desactiva el scroll en el body */
 }
 
 body::before {
@@ -88,10 +87,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Centra el contenido verticalmente */
   align-items: center;
   height: 100vh;
-  /* Hace que el contenedor ocupe toda la altura de la ventana */
 }
 
 .content {
@@ -101,9 +98,7 @@ h3 {
   font-family: "Clash Display", "Clash Display Placeholder", sans-serif;
   width: 43%;
   max-height: 80vh;
-  /* Asegura que el contenido no exceda el 80% de la altura de la ventana */
   overflow: auto;
-  /* Permite el scroll dentro del contenedor si el contenido excede el 80% de la altura */
 }
 
 .linktree {
@@ -116,7 +111,6 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
-  /* Centra el texto del linktree */
 }
 
 .linktree::after {
@@ -151,6 +145,10 @@ h3 {
 .strong {
   font-weight: bold;
   font-weight: 800;
+}
+
+.linktree-celu {
+  display: none;
 }
 
 .title {
@@ -218,10 +216,6 @@ a {
   padding-right: 30px;
 }
 
-.que-hacemos {
-  width: 930px;
-}
-
 li {
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 2em;
@@ -268,11 +262,9 @@ li:hover::after {
 
 .menu-item {
   opacity: 0;
-  /* Ensures elements are hidden before animation */
   animation: slideUp 0.6s ease-out forwards;
 }
 
-/* Add this to stagger the animation for menu items */
 .menu-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -289,14 +281,11 @@ li:hover::after {
   animation-delay: 0.8s;
 }
 
-/* Add this to animate logo items */
 .logo-item {
   opacity: 0;
-  /* Ensures elements are hidden before animation */
   animation: slideUp 0.6s ease-out forwards;
 }
 
-/* Add this to stagger the animation for logo items */
 .logo-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -362,7 +351,33 @@ li:hover::after {
   display: none !important;
 }
 
+.flipbook {
+  margin-top: 100px;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1150px) {
+  h1 {
+    font-size: 58px;
+    height: 100%;
+  }
+}
+
 @media (max-width: 1000px) {
+
+  .flipbook {
+    height: 60vh;
+    width: 100%;
+  }
+
+  .flip {
+    width: 100% !important;
+  }
+
   .hamburguer-menu {
     display: block !important;
   }
@@ -375,6 +390,14 @@ li:hover::after {
     display: block;
   }
 
+  .linktree-celu {
+    display: flex;
+  }
+
+  .container-que-hacemos {
+    height: inherit !important;
+  }
+
   .li-compu {
     display: none !important;
     padding: 0px !important;
@@ -382,19 +405,27 @@ li:hover::after {
 
   .content {
     max-width: 80%;
-    margin-top: 100px;
+    margin-top: 75%;
+    overflow: visible;
   }
 
   .como-trabajamos {
     width: 80%;
   }
 
-  .linktree-container {
-    display: none;
+  .que-hacemos {
+    width: 80%;
+    max-width: 80%;
+    margin-top: 10%;
+    overflow: auto;
   }
 
   .title {
     font-size: 30px;
+  }
+
+  .como-trabajamos {
+    height: 90vh;
   }
 
   .compu {
